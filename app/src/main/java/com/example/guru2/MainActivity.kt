@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         title=findViewById(R.id.title)
         contextEditText=findViewById(R.id.contextEditText)
 
-        title.text = "달력"
+        title.text = "CALENDAR"
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             diaryTextView.visibility = View.VISIBLE
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             diaryContent.visibility = View.INVISIBLE
             updateBtn.visibility = View.INVISIBLE
             deleteBtn.visibility = View.INVISIBLE
-            diaryTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
+            diaryTextView.text = String.format("%d.%d.%d", year, month + 1, dayOfMonth)
             contextEditText.setText("")
             checkDay(year, month, dayOfMonth, userID)
         }
@@ -146,4 +146,5 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()
         }
     }
+
 }
