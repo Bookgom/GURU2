@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Diary">
 
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_toEdit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.92"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.97"-->
+<!--        app:srcCompat="@drawable/ic_baseline_create_24" />-->
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -18,7 +32,7 @@
         tools:layout_constraintHorizontal_weight="1">
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/dateView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
@@ -28,20 +42,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="오늘의 나에게 해주고 싶은 한마디는?" />
 
-        <EditText
-            android:id="@+id/edtToday"
+        <TextView
+            android:id="@+id/todayView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_vertical"
-            android:privateImeOptions="defaultInputmode=korean"
             android:hint="오늘의 한마디"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -50,20 +63,19 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:textAlignment="inherit" />
 
-        <EditText
-            android:id="@+id/edtContext"
+        <TextView
+            android:id="@+id/contextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:privateImeOptions="defaultInputmode=korean"
             android:ems="10"
             android:gravity="top"
+            android:scrollHorizontally="false"
+            android:inputType="textMultiLine"
             android:hint="내용"
             android:minHeight="48dp"
-            android:scrollHorizontally="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:inputType="textMultiLine" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,20 +83,20 @@
             android:gravity="right"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/dateBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                app:icon="@drawable/ic_calendar_4_w" />
+<!--            <Button-->
+<!--                android:id="@+id/editBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:gravity="center"-->
+<!--                app:icon="@drawable/ic_baseline_create_24" />-->
 
             <Button
-                android:id="@+id/finishBtn"
+                android:id="@+id/deleteBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
-                app:icon="@drawable/ic_baseline_check_24" />
+                app:icon="@drawable/ic_baseline_delete_24" />
         </LinearLayout>
 
     </LinearLayout>

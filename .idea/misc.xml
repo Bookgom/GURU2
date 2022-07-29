@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Guru/GURU2/app/src/main/res/layout/activity_diary.xml" value="0.37777777777777777" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.227" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/drawable/ic_baseline_sticky_note_2_24.xml" value="0.227" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/drawable/ic_calendar_4_w.xml" value="0.227" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.227" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/layout/activity_diary.xml" value="0.1" />
         <entry key="..\:/Guru/GURU2/app/src/main/res/layout/activity_diary_list.xml" value="0.2828125" />
         <entry key="..\:/Guru/GURU2/app/src/main/res/layout/activity_diary_view.xml" value="0.37777777777777777" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/layout/activity_main.xml" value="0.5302083333333333" />
         <entry key="..\:/Guru/GURU2/app/src/main/res/layout/diary_edit_toolbar.xml" value="0.396875" />
         <entry key="..\:/Guru/GURU2/app/src/main/res/layout/diary_view.xml" value="0.29635416666666664" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/menu/menu_main.xml" value="0.396875" />
+        <entry key="..\:/Guru/GURU2/app/src/main/res/menu/menu_view.xml" value="0.2898148148148148" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/GURU2/app/src/main/res/layout/activity_main.xml" value="0.176" />
       </map>
     </option>

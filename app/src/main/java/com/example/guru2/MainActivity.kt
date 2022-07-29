@@ -1,17 +1,20 @@
 package com.example.guru2
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import java.io.FileInputStream
 import java.io.FileOutputStream
 
 import android.view.View
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var diaryContent:TextView
     lateinit var title:TextView
     lateinit var contextEditText: EditText
+    lateinit var fab : FloatingActionButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         diaryContent=findViewById(R.id.diaryContent)
         title=findViewById(R.id.title)
         contextEditText=findViewById(R.id.contextEditText)
+        fab=findViewById(R.id.fab)
 
         title.text = "달력"
 
@@ -66,8 +71,13 @@ class MainActivity : AppCompatActivity() {
             diaryContent.text = str
             diaryContent.visibility = View.VISIBLE
         }
-    }
 
+
+        //일기 작성 버튼 클릭 시 Diary 액티비티로 이동
+        fab.setOnClickListener {
+            startActivity( Intent(this@MainActivity,Diary::class.java))
+        }
+    }
     // 달력 내용 조회, 수정
     fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
         //저장할 파일 이름설정
@@ -146,4 +156,19 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()
         }
     }
+
+
+    //메뉴 처음 실행
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    //메뉴에서 옵션이 클릭됐을때
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val intent = Intent(this, DiaryList::class.java)
+        startActivity(intent)
+        return super.onOptionsItemSelected(item)
+    }
+
 }
