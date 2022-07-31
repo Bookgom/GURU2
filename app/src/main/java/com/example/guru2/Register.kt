@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_loginpage.*
 import kotlinx.android.synthetic.main.activity_loginpage.edit_id
 import kotlinx.android.synthetic.main.activity_loginpage.edit_pw
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_register.btn_register as btn_register1
 
 class Register : AppCompatActivity() {
 
@@ -23,8 +24,8 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val btn_register2
-        btn_register2.setOnClickListener {
+
+        btn_register.setOnClickListener {
             Log.d(TAG, "회원가입 버튼 클릭")
 
             val id = edit_id.text.toString()
