@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         contextEditText=findViewById(R.id.contextEditText)
         fab=findViewById(R.id.fab)
 
-        title.text = "달력"
+        title.text = "CALENDAR"
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             diaryTextView.visibility = View.VISIBLE
