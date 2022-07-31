@@ -1,7 +1,7 @@
 package com.example.guru2
 
-class MainLogin class MainActivity : AppCompatActivity() {
-    val TAG: String = "MainActivity"
+class MainLogin : AppCompatActivity() {
+    val TAG: String = "MainLogin"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
