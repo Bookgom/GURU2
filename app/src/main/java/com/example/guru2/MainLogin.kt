@@ -1,5 +1,14 @@
 package com.example.guru2
 
+import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_loginpage.*
+
 class MainLogin : AppCompatActivity() {
     val TAG: String = "MainLogin"
 
